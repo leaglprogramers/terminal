@@ -18,6 +18,7 @@ function Find-OpenConsoleRoot
 # Finds and imports a module that should be local to the project
 #.PARAMETER ModuleName
 # The name of the module to import
+
 function Import-LocalModule
 {
     [CmdletBinding()]
@@ -25,7 +26,6 @@ function Import-LocalModule
         [parameter(Mandatory=$true, Position=0)]
         [string]$Name
     )
-
     $ErrorActionPreference = 'Stop'
 
     $modules_root = "$(Find-OpenConsoleRoot)\.PowershellModules"
